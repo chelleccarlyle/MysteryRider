@@ -1,0 +1,61 @@
+﻿@model IEnumerable<MysteryRider.Models.Database.Entities.MR2_FORMS>
+
+@{
+    ViewBag.Title = "Database Index";
+    ViewBag.EnableFormSelect = false;
+}
+
+<h2>Index</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.FORM_TYPE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SAMPLE_NUMBER)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SUBMIT_DATE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FORM_DATA)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LUPDATE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LUPDATE_BY)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.FORM_TYPE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SAMPLE_NUMBER)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SUBMIT_DATE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FORM_DATA)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LUPDATE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LUPDATE_BY)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.MR2_FORMS_ID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.MR2_FORMS_ID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.MR2_FORMS_ID })
+        </td>
+    </tr>
+}
+
+</table>

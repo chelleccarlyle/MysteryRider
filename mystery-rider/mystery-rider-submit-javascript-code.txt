@@ -1,0 +1,46 @@
+var getformData = function() {
+
+this.q2.10a = $("#2.10 a: Non-folding - design[:checked]");
+
+}
+
+var putFormData = function(data) {
+
+$("#2.10 a: Non-folding - design").attr("checked",data.q210a);
+
+
+}
+
+
+
+$("#btnSave").on("click",function() {
+
+save();
+
+
+}
+
+
+var save = function() {
+var formData = new getformData();
+
+$.ajax({
+async:"true",
+url:{path to server page to process request},
+datatype:"JSON",
+type:"POST",
+data: {action:"saveData",data:JSON.stringify(formData)},
+success: function() {
+	// here is the script you are firing when request is completed
+
+}
+error: function(data) {
+	alert("Here is the error message");
+
+}
+
+}
+
+
+
+});

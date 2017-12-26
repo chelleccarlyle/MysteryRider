@@ -1,0 +1,22 @@
+﻿
+@{
+    ViewBag.Title = "Form Submitted - Mystery Rider";
+    ViewBag.EnableFormSelect = false;
+}
+
+@section scripts {
+    <script src="~/Content/js/trigger.js"></script>
+    <script src="~/Content/js/form-selection.js"></script>
+    <script src="~/Content/js/form-submit.js"></script>
+}
+
+<div id="form-submit">
+
+    <h1 class="display-4">Thank you!</h1>
+    <p class="lead" id="instructions">Your response was successfully submitted.</p>
+
+  @Html.ActionLink("Fill Out Another Survey", "Index", null, new { @class = "btn btn-primary", @type = "button" })
+
+</div>
+
+

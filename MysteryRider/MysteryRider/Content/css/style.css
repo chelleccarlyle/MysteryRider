@@ -1,0 +1,327 @@
+ /* body {
+  min-height: 75rem; /* Can be removed; just added for demo purposes 
+}  
+*/
+
+#metro {
+  margin-left: 3px;
+}
+
+.navbar {
+  margin-bottom: 0;
+}
+
+.jumbotron {
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+  margin-bottom: 0;
+  background-color: #fff;
+}
+
+.jumbotron p:last-child {
+  margin-bottom: 0;
+}
+
+.jumbotron-heading {
+  font-weight: 300;
+}
+
+.jumbotron .container {
+  max-width: 40rem;
+}
+
+.album {
+  min-height: 50rem; /* Can be removed; just added for demo purposes */
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  background-color: #f7f7f7;
+}
+
+.card {
+  float: left;
+  width: 33.333%;
+  padding: .75rem;
+  margin-bottom: 2rem;
+  border: 0;
+}
+
+.card > img {
+  margin-bottom: .75rem;
+}
+
+.card-text {
+  font-size: 85%;
+}
+
+ footer {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+footer p {
+  margin-bottom: 1.5rem;
+} 
+
+/* Custom CSS*/
+
+/* Lato Font */
+body {
+  font-family: 'Lato', sans-serif;
+  letter-spacing: 1.5px;
+  background-color: #cbc9cf;
+}
+
+#logo {
+  margin-right: 5px;
+}
+
+h2 {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.album {
+  background-color: white;
+}
+
+.bg-inverse, .navbar {
+  background-color: black;
+}
+
+#hero-main {
+  background-image: linear-gradient(
+                     rgba(20,20,20, .5), 
+                     rgba(20,20,20, .5)), url("../images/grievance.jpg");
+  background-position-y: center;
+  min-height: 100%;
+  padding: 50px 0;
+}
+
+.featurette-heading {
+  color: white;
+  margin-bottom: 20px;
+}
+
+.featurette {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+span {
+	color: #1e1e1f;
+}
+
+a {
+  color: #67666a;
+}
+
+span, .nav-link {
+  color: white;
+}
+
+a:hover {
+  color: #3f4959;
+  text-decoration: none;
+}
+
+.navbar-toggler { border: none; }
+
+.navbar-default {
+    background-color: #F8F8F8;
+    border-color: #E7E7E7;
+}
+.navbar-default .navbar-nav > li > a {
+    color: #777777;
+}
+
+#navbarCollapse {
+  margin-left: 70px;
+}
+
+.sign {
+  margin-right: 20px;
+}
+
+.navbar {
+  background-color: black;
+}
+
+.jumbotron-heading {
+  display:inline-block;
+  vertical-align: middle;
+  margin-top: 60px;
+}
+
+/* Categories */
+.marketing {
+  margin-top: 30px;
+}
+
+#copyright {
+  font-size: 10px;
+}
+
+#categories {
+  margin-top: 30px;
+}
+
+li {
+  margin-bottom: 10px;
+}
+
+li, p {
+  font-size: 15px;
+}
+
+h1 {
+  font-size: 30px;
+}
+
+/* Form */
+.marketing {
+  background-color: white;
+  padding: 50px;
+  padding-top: 5px;
+  margin-bottom: 30px;
+  box-shadow: 0 0 2px rgba(0,0,0,.12), 0 2px 4px rgba(0,0,0,.24);
+}
+
+#hero-main {
+  border-radius: 0px;
+}
+
+.category-name {
+  font-size: 25px;
+}
+.section-name {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  margin-top: 30px;
+}
+.sub-section-name {
+  font-size: 18px;
+  margin-left: 15px;
+}
+
+.form-checks {
+  display: inline;
+  margin-left: -3px;
+}
+
+.question {
+  margin-bottom: 25px;
+}
+.form-check-input {
+  margin-right: 10px;
+}
+
+.category-divider {
+  margin-bottom: 40px;
+  border: 3px solid #cbc9cf;
+}
+
+.name-divider {
+  margin-top: 50px;
+}
+
+.form-check {
+  margin-right: 30px;
+  vertical-align: text-top;
+}
+
+.form-check-label {
+  padding-left: 10px;
+  font-size: 15px;
+}
+
+.category {
+  margin-top: 70px;
+}
+
+#save-and-submit {
+  margin-top: 30px;
+}
+
+#required {
+  color: red;
+}
+
+.section-input {
+  margin-bottom: 30px;
+}
+
+label {
+  font-weight: bold;
+}
+
+.form-check-label {
+  font-weight: normal;
+}
+
+.sub-section-name {
+  font-weight: bold;
+}
+
+.custom-control-description {
+  color: black;
+  font-weight: lighter;
+}
+
+.custom-control-indicator {
+  margin-right: 20px;
+}
+
+.display-4 {
+  font-size: 40px;
+}
+
+#form-selection {
+  padding: 20px;
+  margin-top: 50px;
+}
+
+#form-submit {
+  padding: 20px;
+  margin-top: 50px;
+}
+
+.dropdown-menu {
+  box-shadow: 0 0 2px rgba(0,0,0,.12), 0 2px 4px rgba(0,0,0,.24);
+}
+
+#sign-in-dropdown {
+  left: 50%;
+  right: auto;
+  transform: translate(-50%, 0);
+}
+
+.navbar.navbar-custom .navbar-nav > li > a {
+  color: white;
+}
+
+#instructions {
+  margin: 20px 0;
+}
+
+#get-started {
+  margin-top: 20px;
+}
+
+#update-survey {
+  margin-top: 20px;
+}
+
+#form-select-error {
+  color: red;
+}
+
+#select-error {
+  color: red;
+}
+
+/*Form validation - empty text area*/
+.has-error .form-control {
+    border-color: #a94442;
+    -webkit-box-shadow: 0 0 2px #a9444227, 0 2px 4px #a9444227;
+    box-shadow: 0 0 2px #a9444227, 0 2px 4px #a9444227;
+}

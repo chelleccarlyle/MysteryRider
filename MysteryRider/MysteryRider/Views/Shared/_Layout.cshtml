@@ -1,0 +1,201 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="~/Content/images/m-logo.png">
+    <title>@ViewBag.Title - Mystery Rider Reports</title>
+    <!-- Lato Font -->
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/1000hz-bootstrap-validator/0.11.9/validator.js"></script>
+    @Scripts.Render("~/bundles/modernizr")
+    <script src="~/Scripts/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb"
+            crossorigin="anonymous"></script>
+    <!-- Custom styles for this template -->
+    @Styles.Render("~/Content/css")
+
+    <!-- JQuery -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+  
+    @RenderSection("scripts", required: false)
+    <!-- Bootstrap JS -->
+    <script src="~/Content/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/1000hz-bootstrap-validator/0.11.9/validator.js"></script>
+
+    <!-- Confetti JS -->
+    <script src="~/Content/js/confetti.js"></script>
+</head>
+<body>
+    <nav class="navbar navbar-inverse navbar-toggleable-md fixed-top navbar-custom">
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse"
+                aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="surprise-wrapper">
+        <a href="https://www.metro.net/" class="navbar-brand surprise-hover">
+            <img src="/Content/images/m-logo-white.png" id="logo" alt="Logo" height="35" width="35">
+            <span id="metro">Metro</span>
+        </a>
+        </div>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav mr-auto">
+                @if (ViewBag.EnableFormSelect)
+                {
+                <li class="dropdown nav-item" id="survey-dropdown">
+                    <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                        Mystery Rider Survey
+                        <span class="caret"></span>
+                    </a>
+                    <div class="dropdown-menu">
+                        <form class="px-4 py-3" id="selection-form">
+                            <div class="form-check">
+                                <label class="form-check-label">
+                                    <input class="form-check-input" type="checkbox" value="1" name="dropdown-select" id="trip-summary"> Trip Summary
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <label class="form-check-label">
+                                    <input class="form-check-input" type="checkbox" value="2" name="dropdown-select" id="surveyor-observations"> Surveyor Observations
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <label class="form-check-label">
+                                    <input class="form-check-input" type="checkbox" value="3" name="dropdown-select" id="customer-observations"> Customer Observations
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <label class="form-check-label">
+                                    <input class="form-check-input" type="checkbox" value="4" name="dropdown-select" id="announcements-and-signage"> Announcements and Signage
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <label class="form-check-label">
+                                    <input class="form-check-input" type="checkbox" value="5" name="dropdown-select" id="safety"> Safety
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <label class="form-check-label">
+                                    <input class="form-check-input" type="checkbox" value="6" name="dropdown-select" id="special-ride-comments"> Special Ride Comments
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <label class="form-check-label">
+                                    <input class="form-check-input" type="checkbox" value="7" name="dropdown-select" id="lep-questions"> LEP Questions
+                                </label>
+                            </div>
+                            <div id="select-error"></div>
+                            <button type="button" class="btn btn-primary" id="update-survey" data-toggle="dropdown">Update</button>
+                        </form>
+                    </div>
+                </li>
+                }
+            </ul>
+            <ul class="navbar-nav">
+                <li class="sign dropdown nav-item">
+                    <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                        Sign In
+                        <span class="caret"></span>
+                    </a>
+                    <div class="dropdown-menu" id="sign-in-dropdown">
+                        <form class="px-4 py-3">
+                            <div class="form-group">
+                                <label for="exampleDropdownFormEmail1">Email address</label>
+                                <input type="email" class="form-control" id="exampleDropdownFormEmail1" placeholder="email@example.com">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleDropdownFormPassword1">Password</label>
+                                <input type="password" class="form-control" id="exampleDropdownFormPassword1" placeholder="Password">
+                            </div>
+                            <div class="form-check">
+                                <label class="form-check-label">
+                                    <input type="checkbox" class="form-check-input" checked> Remember me
+                                </label>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Sign in</button>
+                        </form>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">New around here? Sign up</a>
+                        <a class="dropdown-item" href="#">Forgot password?</a>
+                    </div>
+                </li>
+                <li class="sign">
+                    <button class="btn btn-outline-primary my-2 my-sm-0">Sign Up</button>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <section class="jumbotron text-center" id="hero-main">
+
+        <div class="container" id="jumbo-container">
+            <h1 class="jumbotron-heading" style="color: white">Mystery Rider Program</h1>
+        </div>
+
+    </section>
+    <div class="container marketing">
+
+        @RenderBody()
+
+        <hr class="featurette-divider">
+
+        <footer class="text-muted">
+            <div class="container">
+                <p id="copyright" class="float-right">Copyright © @DateTime.Now.Year Metro</p>
+            </div>
+        </footer>
+
+    </div>
+
+    @*<div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                        <li>@Html.ActionLink("About", "About", "Home")</li>
+                        <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="container body-content">
+            @RenderBody()
+            <hr />
+            <footer>
+                <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+            </footer>
+        </div>*@
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+ 
+    @*<script src="~/Scripts/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n"
+            crossorigin="anonymous"></script>*@
+    <script>
+        $(function () {
+            Holder.addTheme("thumb", { background: "#55595c", foreground: "#eceeef", text: "Thumbnail" });
+        });
+
+        $("#survey-redirect").on("click", function () {
+            window.location.replace("index.html");
+        });
+    </script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="~/Scripts/ie10-viewport-bug-workaround.js"></script>
+    <svg xmlns="http://www.w3.org/2000/svg" width="356" height="280" viewBox="0 0 356 280" preserveAspectRatio="none" style="display: none; visibility: hidden; position: absolute; top: -100%; left: -100%;">
+        <defs>
+            <style type="text/css"></style>
+        </defs>
+        <text x="0" y="18" style="font-weight:bold;font-size:18pt;font-family:Arial, Helvetica, Open Sans, sans-serif">356x280</text>
+    </svg>
+</body>
+</html>
